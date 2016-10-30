@@ -1,0 +1,22 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "start: node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aksm/friendfinder.git"
+  },
+  "author": "Al Min",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aksm/friendfinder/issues"
+  },
+  "homepage": "https://github.com/aksm/friendfinder#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
