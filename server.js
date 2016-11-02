@@ -2,10 +2,10 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
-var dotenv = require("dotenv");
+// var dotenv = require("dotenv");
 var firebase = require("firebase");
 var app = express();
-dotenv.load();
+// dotenv.load();
 
 // Set port
 app.set("port", process.env.PORT || 8080);
