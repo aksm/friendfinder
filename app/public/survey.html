@@ -10,5 +10,272 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body></body>
+<body>
+  <nav class="white z-depth-0" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo center"><img src="fflogo-teal.svg" alt="friend finder logo" class="ff-logo"></a>
+    </div>
+  </nav>
+
+  <div class="row">
+  	<!-- Quiz form -->
+    <form class="col s12 formValidate" id="quiz">
+
+      <!-- Name field -->
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="name" type="text" required class="validate" name="name">
+          <label for="name" data-error="Please enter your name" data-success="Right-O!">Name *</label>
+        </div>
+      </div>
+	  
+	  <!-- Image URL field -->
+	  <div class="row">
+		<div class="input-field col s6">
+		  <input class="validate" required id="curl" type="url" name="curl">
+		  <label for="curl" data-error="Please give valid URL (https://www.example.com)." data-success="Right on!">Image URL *</label>
+		</div>	  
+	  </div>
+	  
+	  <!-- Question 1 -->
+	  <div class="row">
+	   <h5 class="question">I rarely plan ahead. I’m a spur-of-the-moment kind of person.</h5>
+	   <p>
+	      <input name="q1-s-agree" type="radio" id="q1-s-agree" required/>
+	      <label for="q1-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q1-agree" type="radio" id="q1-agree" />
+	      <label for="q1-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q1-disagree" type="radio" id="q1-disagree" />
+	      <label for="q1-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q1-s-disagree" type="radio" id="q1-s-disagree"/>
+	        <label for="q1-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 2 -->
+	  <div class="row">
+	   <h5 class="question">Cheating on your partner is OK so long as you don’t get caught.</h5>
+	   <p>
+	      <input name="q2-s-agree" type="radio" id="q2-s-agree" required/>
+	      <label for="q2-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q2-agree" type="radio" id="q2-agree" />
+	      <label for="q2-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q2-disagree" type="radio" id="q2-disagree" />
+	      <label for="q2-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q2-s-disagree" type="radio" id="q2-s-disagree"/>
+	        <label for="q2-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 3 -->
+	  <div class="row">
+	   <h5 class="question">If something better comes along it’s OK to cancel a longstanding appointment.</h5>
+	   <p>
+	      <input name="q3-s-agree" type="radio" id="q3-s-agree" required/>
+	      <label for="q3-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q3-agree" type="radio" id="q3-agree" />
+	      <label for="q3-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q3-disagree" type="radio" id="q3-disagree" />
+	      <label for="q3-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q3-s-disagree" type="radio" id="q3-s-disagree"/>
+	        <label for="q3-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 4 -->
+	  <div class="row">
+	   <h5 class="question">Seeing an animal injured or in pain doesn’t bother me in the slightest.</h5>
+	   <p>
+	      <input name="q4-s-agree" type="radio" id="q4-s-agree" required/>
+	      <label for="q4-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q4-agree" type="radio" id="q4-agree" />
+	      <label for="q4-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q4-disagree" type="radio" id="q4-disagree" />
+	      <label for="q4-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q4-s-disagree" type="radio" id="q4-s-disagree"/>
+	        <label for="q4-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 5 -->
+	  <div class="row">
+	   <h5 class="question">Driving fast cars, riding rollercoasters, and skydiving, appeal to me.</h5>
+	   <p>
+	      <input name="q5-s-agree" type="radio" id="q5-s-agree" required/>
+	      <label for="q5-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q5-agree" type="radio" id="q5-agree" />
+	      <label for="q5-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q5-disagree" type="radio" id="q5-disagree" />
+	      <label for="q5-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q5-s-disagree" type="radio" id="q5-s-disagree"/>
+	        <label for="q5-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 6 -->
+	  <div class="row">
+	   <h5 class="question">It doesn’t matter to me if I have to step on other people to get what I want.</h5>
+	   <p>
+	      <input name="q6-s-agree" type="radio" id="q6-s-agree" required/>
+	      <label for="q6-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q6-agree" type="radio" id="q6-agree" />
+	      <label for="q6-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q6-disagree" type="radio" id="q6-disagree" />
+	      <label for="q6-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q6-s-disagree" type="radio" id="q6-s-disagree"/>
+	        <label for="q6-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 7 -->
+	  <div class="row">
+	   <h5 class="question">I’m very persuasive. I have a talent for getting other people to do what I want.</h5>
+	   <p>
+	      <input name="q7-s-agree" type="radio" id="q7-s-agree" required/>
+	      <label for="q7-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q7-agree" type="radio" id="q7-agree" />
+	      <label for="q7-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q7-disagree" type="radio" id="q7-disagree" />
+	      <label for="q7-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q7-s-disagree" type="radio" id="q7-s-disagree"/>
+	        <label for="q7-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 8 -->
+	  <div class="row">
+	   <h5 class="question">I’d be good in a dangerous job because I can make my mind up quickly.</h5>
+	   <p>
+	      <input name="q8-s-agree" type="radio" id="q8-s-agree" required/>
+	      <label for="q8-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q8-agree" type="radio" id="q8-agree" />
+	      <label for="q8-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q8-disagree" type="radio" id="q8-disagree" />
+	      <label for="q8-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q8-s-disagree" type="radio" id="q8-s-disagree"/>
+	        <label for="q8-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 9 -->
+	  <div class="row">
+	   <h5 class="question">I find it easy to keep it together when others are cracking under pressure.</h5>
+	   <p>
+	      <input name="q9-s-agree" type="radio" id="q9-s-agree" required/>
+	      <label for="q9-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q9-agree" type="radio" id="q9-agree" />
+	      <label for="q9-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q9-disagree" type="radio" id="q9-disagree" />
+	      <label for="q9-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q9-s-disagree" type="radio" id="q9-s-disagree"/>
+	        <label for="q9-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 10 -->
+	  <div class="row">
+	   <h5 class="question">If you’re able to con someone, that’s their problem. They deserve it.</h5>
+	   <p>
+	      <input name="q10-s-agree" type="radio" id="q10-s-agree" required/>
+	      <label for="q10-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q10-agree" type="radio" id="q10-agree" />
+	      <label for="q10-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q10-disagree" type="radio" id="q10-disagree" />
+	      <label for="q10-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q10-s-disagree" type="radio" id="q10-s-disagree"/>
+	        <label for="q10-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+
+	  <!-- Question 11 -->
+	  <div class="row">
+	   <h5 class="question">Most of the time when things go wrong it’s somebody else’s fault, not mine.</h5>
+	   <p>
+	      <input name="q11-s-agree" type="radio" id="q11-s-agree" required/>
+	      <label for="q11-s-agree">Strongly Agree</label>
+	    </p>
+	    <p>
+	      <input name="q11-agree" type="radio" id="q11-agree" />
+	      <label for="q11-agree">Agree</label>
+	    </p>
+	    <p>
+	      <input name="q11-disagree" type="radio" id="q11-disagree" />
+	      <label for="q11-disagree">Disagree</label>
+	    </p>
+	      <p>
+	        <input name="q11-s-disagree" type="radio" id="q11-s-disagree"/>
+	        <label for="q11-s-disagree">Strongly Disagree</label>
+	    </p>
+	  </div>
+	  <button class="btn cyan waves-effect waves-light" type="submit" name="action">Submit
+	    <i class="material-icons right">send</i>
+	  </button>
+    </form>
+  </div>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/survey.js"></script>
+</body>
 </html>

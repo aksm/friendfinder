@@ -5,6 +5,8 @@
  *
  * Made By MaterializeCSS.com
  */
+
+ /*Home style*/
 .ff-logo {
   height: 48px;
   padding-top: 10px;
@@ -28,9 +30,11 @@ p {
   height: auto;
   color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+.parallax-container .section {
+  width: 100%;
+}
+
+/*Survey style*/
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
