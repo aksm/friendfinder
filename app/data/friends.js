@@ -1,6 +1,11 @@
 var firebase = require("firebase");
 // var dotenv = require("dotenv");
-var config = require("../../config.js");
+var config = {
+  apiKey: process.env.FB_APIKEY,
+  authDomain: process.env.FB_AUTHDOMAIN,
+  databaseURL: process.env.FB_DATABASEURL,
+  storageBucket: process.env.FB_STORAGEBUCKET,
+};
 
 firebase.initializeApp(config);
 var db = firebase.database();
