@@ -10,7 +10,6 @@ router.route("/auth")
 	.get(function(req, res) {
 		var email = req.query.email;
 		var password = req.query.password;
-		// var friend = new friends(email, password);
 		friends.loginuser(email, password);
 		res.send({redirect: "/survey"});
 	})
@@ -18,15 +17,18 @@ router.route("/auth")
 		var email = req.body.email;
 		var password = req.body.password;
 		friends.registeruser(email, password);
-		// var friend = new friends(email, password);
-		// friend.registeruser();
 		res.send({redirect: "/survey"});
 	});
 router.route("/survey")
-	.post(parseUrlencoded, function(req, res) {
+	.post(parseUrlencoded, function(req, res, next) {
 		var user = req.body;
-		console.log(user);
+		// console.log(user);
 		friends.addsurvey(user);
 		res.status(201).json(user.name);
+		next();
+	})
+	.all(function(req, res) {
+		// console.log(req);
+		friends.findmatch(req);
 	});
 module.exports = router;
