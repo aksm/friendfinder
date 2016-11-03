@@ -1,7 +1,6 @@
 var firebase = require("firebase");
 // var dotenv = require("dotenv");
 var config = require("../../config.js");
-console.log(config);
 
 firebase.initializeApp(config);
 var db = firebase.database();
