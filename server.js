@@ -5,7 +5,7 @@ var path = require("path");
 // var dotenv = require("dotenv");
 var app = express();
 // var friends = require("./app/data/friends.js");
-dotenv.load();
+// dotenv.load();
 
 // Set port
 app.set("port", process.env.PORT || 8080);
