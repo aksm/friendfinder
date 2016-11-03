@@ -29,6 +29,7 @@ var login = function() {
 				$.post("/api/auth", user).
 				done(function(data) {
 					console.log("yay");
+					window.location = data.redirect;
 				});
 				break;
 			default:
