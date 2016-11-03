@@ -15,11 +15,30 @@ var gateway = function() {
 
 var login = function() {
 	$("#login-form").on("submit", function() {
+		var user = $(this).serializeArray();
 		var entryType = $("#login-button").text();
+		switch(entryType) {
+			case "Login":
+				$.get("/api/auth", user).
+				done(function(data) {
+					console.log("yay");
+					window.location = data.redirect;
+				});
+				break;
+			case "Register":
+				$.post("/api/auth", user).
+				done(function(data) {
+					console.log("yay");
+				});
+				break;
+			default:
+				console.log("WTF");
+		}
 	});
 };
 
 $(function() {
 	$(".modal").modal();
 	gateway();
+	login();
 });
