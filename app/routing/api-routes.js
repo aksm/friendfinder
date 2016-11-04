@@ -5,7 +5,10 @@ var parseUrlencoded = bodyParser.urlencoded({extended: false});
 var friends = require("../data/friends.js");
 var path = require("path");
 
+// Initialize firebase
 friends.init();
+
+// Route for authentication
 router.route("/auth")
 	.get(function(req, res) {
 		var email = req.query.email;
@@ -19,16 +22,13 @@ router.route("/auth")
 		friends.registeruser(email, password);
 		res.send({redirect: "/survey"});
 	});
+
+// Route for handling survey data
 router.route("/survey")
-	.post(parseUrlencoded, function(req, res, next) {
+	.post(parseUrlencoded, function(req, res) {
 		var user = req.body;
-		// console.log(user);
-		friends.addsurvey(user);
-		res.status(201).json(user.name);
-		next();
-	})
-	.all(function(req, res) {
-		// console.log(req);
-		friends.findmatch(req);
+		friends.addsurvey(user).findmatch(req, function(err, matchName) {
+			res.status(201).json(matchName);			
+		});
 	});
 module.exports = router;

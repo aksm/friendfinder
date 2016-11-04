@@ -19,7 +19,5 @@ var api = require("./app/routing/api-routes");
 app.use("/", html);
 app.use("/api", api);
 
-
-
-
+// Listener
 app.listen(app.get("port"), function() {console.log("Hollaback on port: "+app.get("port"));});
